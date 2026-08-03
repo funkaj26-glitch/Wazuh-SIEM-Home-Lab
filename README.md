@@ -37,7 +37,7 @@ The project also documents the troubleshooting process involved in configuring t
 ## 🌐 Network Configuration
 
 - VirtualBox Network Mode: Bridged Adapter
-- Ubuntu IP Address: 192.168.1.10
+- Ubuntu IP Address: 192.168.X.X
 - Windows Host: Same local network
 - Communication Ports:
   - TCP 1514
