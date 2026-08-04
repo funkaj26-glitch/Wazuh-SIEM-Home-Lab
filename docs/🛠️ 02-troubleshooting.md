@@ -18,7 +18,7 @@ This document catalogs every real issue encountered while building this lab. Eac
 VirtualBox → VM Settings → Network → Attached to: Bridged Adapter
 ```
 
-![Screenshot: VirtualBox Network settings comparing NAT vs Bridged Adapter selection]
+<img width="807" height="509" alt="Network setiings" src="https://github.com/user-attachments/assets/76bfc571-fa2f-4b44-9859-e55a94315def" />
 
 ---
 
@@ -40,7 +40,7 @@ ipconfig
 
 **Resolution:** After confirming both adapters were set to Bridged Adapter and restarting networking on both VMs, `hostname -I` and `ipconfig` confirmed both machines were now on the same subnet, and connectivity was restored.
 
-![Screenshot: Side-by-side terminal output confirming matching subnet on both machines]
+
 
 ---
 
@@ -54,7 +54,8 @@ ipconfig
 
 **Resolution:** Located and retrieved the generated Dashboard credentials from the installer's output file, then used them to log in successfully. This was noted as an important operational reminder: **always capture generated credentials immediately during any automated installation.**
 
-![Screenshot: Wazuh Dashboard login page]
+<img width="1853" height="982" alt="Wazuh Login" src="https://github.com/user-attachments/assets/0b08d99d-b096-4c1f-a733-deed064caf08" />
+
 
 ---
 
@@ -77,7 +78,7 @@ sudo systemctl status wazuh-indexer
 ```
 For a lasting fix rather than a one-time restart, the lab's VM memory allocation was reviewed, since production-grade guidance recommends dedicating adequate RAM specifically for indexer/JVM heap usage. This issue is tracked further in the [Future Improvements](04-future-improvements.md) document as a candidate for resource tuning.
 
-![Screenshot: systemctl status output showing wazuh-indexer active after restart]
+<img width="1853" height="982" alt="Wazuh Manager" src="https://github.com/user-attachments/assets/1ae06008-dd33-4ae0-9484-5c17f5829fd0" />
 
 ---
 
@@ -113,7 +114,8 @@ sc query WazuhSvc
 ```
 The service reported `RUNNING`, confirming the fix was successful.
 
-![Screenshot: Corrected ossec.conf XML snippet with properly closed tags]
+<img width="694" height="483" alt="Error" src="https://github.com/user-attachments/assets/8c237791-fb73-45c5-95ef-ed1bc998a7d9" />
+
 
 > **Takeaway:** XML configuration files are strict about structure — a single unclosed tag can prevent an entire service from starting. Always validate configuration syntax after manual edits, ideally with an XML linter or careful visual review, before restarting the service.
 
