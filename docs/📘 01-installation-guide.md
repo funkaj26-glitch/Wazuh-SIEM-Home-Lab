@@ -17,8 +17,7 @@ This guide walks through how the Wazuh SIEM stack was deployed on Ubuntu and how
 
 **Why Bridged Adapter instead of NAT:** Bridged networking places each virtual machine directly on the physical LAN, giving it its own IP address from the router's DHCP pool. This mirrors how a real server and a real endpoint would communicate on a corporate network, and it allows the Wazuh Manager and the Windows Agent to reach each other directly over ports 1514/1515 without additional port forwarding rules that NAT mode would otherwise require.
 
-![Screenshot: VirtualBox settings panel with Bridged Adapter selected]
-
+<img width="807" height="509" alt="Network setiings" src="https://github.com/user-attachments/assets/fcda950b-fa01-44ba-99f9-dca9128ad60c" />
 ---
 
 ## 1.2 Preparing the Ubuntu Server
