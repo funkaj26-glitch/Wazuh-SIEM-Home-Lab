@@ -167,7 +167,7 @@ sc query WazuhSvc
 
 A specific folder on the Windows endpoint was added to the agent's FIM configuration so that Wazuh would monitor it for file creation, modification, and deletion events. This was verified by creating, editing, and removing test files inside the monitored folder and confirming that corresponding alerts appeared on the Wazuh Dashboard.
 
-<img width="1853" height="982" alt="File Intergity" src="https://github.com/user-attachments/assets/d0d53a44-d5ef-4137-a788-1c61f973f63a" /><img width="1853" height="982" alt="Wazuh Manager" src="https://github.com/user-attachments/assets/ad46e378-a86e-4e87-ad32-f6143115b35b" />
+<img width="1853" height="982" alt="File Intergity" src="https://github.com/user-attachments/assets/d0d53a44-d5ef-4137-a788-1c61f973f63a" />
 
 
 Full verification steps are documented in the [Verification Guide](06-verification-guide.md).
