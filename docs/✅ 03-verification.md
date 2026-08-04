@@ -14,7 +14,7 @@ sudo systemctl status wazuh-dashboard
 
 **Expected result:** All three services report `active (running)`. This confirms the core SIEM stack — event processing (Manager), data storage/search (Indexer), and the web UI (Dashboard) — is fully operational.
 
-![Screenshot: Terminal showing all three services active]
+<img width="1853" height="982" alt="Wazuh Dashboard Status" src="https://github.com/user-attachments/assets/3139cff4-9cdd-457a-b6bc-d901b5ea7cf4" />
 
 ---
 
@@ -50,7 +50,6 @@ ipconfig
 
 **Expected result:** Both the Ubuntu server and Windows endpoint show IP addresses within the same subnet, confirming Bridged Adapter networking is functioning correctly and both machines can route to each other.
 
-![Screenshot: Side-by-side IP address confirmation between Ubuntu and Windows]
 
 ---
 
@@ -62,7 +61,6 @@ sc query WazuhSvc
 
 **Expected result:** The `STATE` field reports `RUNNING`, confirming the Wazuh Agent process is active on the Windows endpoint.
 
-![Screenshot: sc query output showing WazuhSvc RUNNING]
 
 ---
 
@@ -75,7 +73,7 @@ Steps:
 
 **Expected result:** The Windows endpoint is listed by name/ID with an "Active" (green) status indicator, confirming it is successfully communicating with the Manager.
 
-![Screenshot: Wazuh Dashboard Agents page showing Windows endpoint as Active]
+<img width="1853" height="982" alt="Dashboard Overview" src="https://github.com/user-attachments/assets/f4c2a2b5-5f29-4455-975d-cb5de55753bf" />
 
 ---
 
@@ -92,7 +90,7 @@ This is the most important functional test in the lab, since it confirms the Man
 
 **Expected result:** Three distinct alerts appear on the Dashboard corresponding to the file's creation, modification, and deletion — confirming FIM is actively monitoring the configured directory in real time.
 
-![Screenshot: Wazuh Dashboard FIM events showing file added, modified, and deleted alerts]
+<img width="1853" height="982" alt="Secuirty Events" src="https://github.com/user-attachments/assets/6ccb8fa0-c0de-44d9-b6ca-a5e0afd3c16c" />
 
 ---
 
