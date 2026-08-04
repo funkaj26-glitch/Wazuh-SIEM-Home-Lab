@@ -130,8 +130,6 @@ ipconfig
 ```
 - `ipconfig` — Displays the IP configuration for all network adapters on the Windows machine, used here to confirm the endpoint had received a valid LAN IP address from the same network segment as the Ubuntu server.
 
-![Screenshot: Terminal output of hostname -I next to Windows ipconfig output, showing matching subnet]
-
 ---
 
 ## 1.9 Enrolling the Windows Agent
