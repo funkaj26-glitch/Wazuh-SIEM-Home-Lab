@@ -160,8 +160,7 @@ sc query WazuhSvc
 
 `sc query` interacts with the Windows Service Control Manager to report the current state of a named service — in this case `WazuhSvc`, the Windows service that runs the Wazuh Agent. A `RUNNING` state confirms the agent process is active on the endpoint.
 
-![Screenshot: Windows Services panel showing Wazuh Agent service running]
-
+<img width="637" height="174" alt="Query" src="https://github.com/user-attachments/assets/e90e569e-2856-4405-920e-bc5a35cf239e" />
 ---
 
 ## 1.10 Enabling File Integrity Monitoring (FIM)
