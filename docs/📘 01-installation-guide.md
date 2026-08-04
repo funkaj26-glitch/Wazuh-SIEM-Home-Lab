@@ -63,8 +63,7 @@ sudo bash ./wazuh-install.sh -a -i
 
 This single script handles dependency resolution, service creation, and initial configuration for all three components, which significantly simplifies a process that would otherwise require manually installing and wiring together three separate services.
 
-![Screenshot: Terminal output showing Wazuh installation script completing successfully]
-
+<img width="1853" height="982" alt="Wazuh Dashboard Status" src="https://github.com/user-attachments/assets/af2836b7-c98c-4794-bbb2-77e50ce33ae1" />
 > **Note:** During this stage, the installer generates and displays the initial admin credentials for the Wazuh Dashboard. These credentials must be captured immediately, as retrieving them later requires locating the password file on disk (covered in the [Troubleshooting Guide](02-troubleshooting-guide.md)).
 
 ---
@@ -81,8 +80,7 @@ sudo systemctl status wazuh-dashboard
 
 `systemctl status <service>` queries `systemd` (Ubuntu's service manager) for the current run state of a service, showing whether it is `active (running)`, `failed`, or `inactive`, along with recent log entries. Checking all three services independently — rather than assuming a successful install means everything is running — is a good operational habit, since it was this exact check that revealed the Indexer had stopped due to a memory issue (see Troubleshooting Guide, Issue #4).
 
-![Screenshot: Terminal showing all three Wazuh services active and running]
-
+<img width="1853" height="982" alt="Wazuh Manager" src="https://github.com/user-attachments/assets/9e554789-9961-4051-acd3-e788e42d240b" />
 ---
 
 ## 1.6 Confirming Network Listeners
@@ -170,7 +168,8 @@ sc query WazuhSvc
 
 A specific folder on the Windows endpoint was added to the agent's FIM configuration so that Wazuh would monitor it for file creation, modification, and deletion events. This was verified by creating, editing, and removing test files inside the monitored folder and confirming that corresponding alerts appeared on the Wazuh Dashboard.
 
-![Screenshot: Wazuh Dashboard FIM alert showing a modified file on the Windows endpoint]
+<img width="1853" height="982" alt="File Intergity" src="https://github.com/user-attachments/assets/d0d53a44-d5ef-4137-a788-1c61f973f63a" /><img width="1853" height="982" alt="Wazuh Manager" src="https://github.com/user-attachments/assets/ad46e378-a86e-4e87-ad32-f6143115b35b" />
+
 
 Full verification steps are documented in the [Verification Guide](06-verification-guide.md).
 
